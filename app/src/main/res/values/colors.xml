@@ -60,4 +60,5 @@
     <color name="example_7_yellow">#FFEB3B</color>
     <color name="mainGreen">#CCEAF7F3</color>
     <color name="mainGreenStroke">#2E29AB87</color>
+    <color name="mainBlack">#FF323232</color>
 </resources>

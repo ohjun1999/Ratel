@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/line_radius_3dp"
+    android:elevation="5dp"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/inquiry_ing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_ing1"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/inquiry_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_end1" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/inquiryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="2022.04.05" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/inquiryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="동문수첩 관련 문의입니다."
+        android:textColor="@color/black" />
+
+</LinearLayout>
