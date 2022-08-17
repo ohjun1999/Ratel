@@ -69,7 +69,7 @@ class BookMarkAdapter (val iduser: String, val context: Context, val UserList: A
         holder.check2.setOnClickListener {
 
             db.collection("teams")
-                .document("FxRFio9hTwGqAsU5AIZd")
+                .document("50Sr1i18FXV5PLHJ9T8k")
                 .collection("User").document(user.uid.toString()).update("bookmark", FieldValue.arrayRemove(iduser))
             holder.check2.visibility = View.GONE
 
@@ -85,7 +85,7 @@ class BookMarkAdapter (val iduser: String, val context: Context, val UserList: A
     // 파이어스토어에서 데이터를 불러와서 검색어가 있는지 판단
     fun search(searchWord: String, option: String) {
         firestore?.collection("teams")
-            ?.document("FxRFio9hTwGqAsU5AIZd")
+            ?.document("50Sr1i18FXV5PLHJ9T8k")
             ?.collection("User")
             ?.addSnapshotListener { querySnapshot, _ ->
                 // ArrayList 비워줌

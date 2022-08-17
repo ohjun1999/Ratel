@@ -148,7 +148,7 @@ class NoteActivity : AppCompatActivity() {
         val first =
             firestore
                 ?.collection("teams")
-                ?.document("FxRFio9hTwGqAsU5AIZd")
+                ?.document("50Sr1i18FXV5PLHJ9T8k")
                 ?.collection("User")?.orderBy("year", Query.Direction.ASCENDING)?.limit(20)
 
         ////        val roomDB = Room.databaseBuilder(
@@ -175,7 +175,7 @@ class NoteActivity : AppCompatActivity() {
 //                    var lastVisible = querySnapshot.documents[querySnapshot.size() - 1]
 //                    var next = firestore
 //                        ?.collection("teams")
-//                        ?.document("FxRFio9hTwGqAsU5AIZd")
+//                        ?.document("50Sr1i18FXV5PLHJ9T8k")
 //                        ?.collection("User")
 //                        ?.orderBy("year", Query.Direction.ASCENDING)
 //                        ?.startAfter(lastVisible)
@@ -207,7 +207,7 @@ class NoteActivity : AppCompatActivity() {
 //                                                querySnapshot.documents[querySnapshot.size() - 1]
 //                                            next = firestore
 //                                                ?.collection("teams")
-//                                                ?.document("FxRFio9hTwGqAsU5AIZd")
+//                                                ?.document("50Sr1i18FXV5PLHJ9T8k")
 //                                                ?.collection("User")
 //                                                ?.orderBy("year", Query.Direction.ASCENDING)
 //                                                ?.startAfter(lastVisible)
@@ -316,7 +316,7 @@ class NoteActivity : AppCompatActivity() {
 //        // 파이어스토어에서 데이터를 불러와서 검색어가 있는지 판단
         fun search(searchWord: String, option: String) {
             firestore?.collection("teams")
-                ?.document("FxRFio9hTwGqAsU5AIZd")
+                ?.document("50Sr1i18FXV5PLHJ9T8k")
                 ?.collection("User")
                 ?.addSnapshotListener { querySnapshot, _ ->
                     // ArrayList 비워줌

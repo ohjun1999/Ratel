@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         val bookMark = intent.getStringExtra("bookMark")
         val id = intent.getStringExtra("id")
         Log.d("test", name.toString())
-        FirebaseMessaging.getInstance().subscribeToTopic("1")
+//        FirebaseMessaging.getInstance().subscribeToTopic("1")
 
 
 
@@ -81,11 +81,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NoticeActivity::class.java)
             startActivity(intent)
         }
-        binding.goDate.setOnClickListener {
-            val intent = Intent(this, DateActivity::class.java)
-            startActivity(intent)
-
-        }
+//        binding.goDate.setOnClickListener {
+//            val intent = Intent(this, DateActivity::class.java)
+//            startActivity(intent)
+//
+//        }
         binding.goExplain.setOnClickListener {
             val intent = Intent(this, ExplainGroupActivity::class.java)
             startActivity(intent)

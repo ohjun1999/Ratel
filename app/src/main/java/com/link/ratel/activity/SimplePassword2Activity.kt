@@ -83,7 +83,7 @@ class SimplePassword2Activity : AppCompatActivity() {
                 var id: String
                 var bookMark: String
                 val logPhoneNum = MySharedPreferences.getUserId(this)
-                val login = db.collection("teams").document("FxRFio9hTwGqAsU5AIZd")
+                val login = db.collection("teams").document("50Sr1i18FXV5PLHJ9T8k")
                     .collection("User").whereEqualTo("phoneNum", logPhoneNum)
                     .whereEqualTo("check", "O")
                 login

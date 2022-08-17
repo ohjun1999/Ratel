@@ -47,7 +47,7 @@ class BookmarkFragment : Fragment() {
     val first =
         firestore
             ?.collection("teams")
-            ?.document("FxRFio9hTwGqAsU5AIZd")
+            ?.document("50Sr1i18FXV5PLHJ9T8k")
             ?.collection("User")?.whereArrayContainsAny("bookmark", listOf("010-2281-4489"))
             ?.limit(20)
 
@@ -68,7 +68,7 @@ class BookmarkFragment : Fragment() {
 
 
         db.collection("teams")
-            .document("FxRFio9hTwGqAsU5AIZd")
+            .document("50Sr1i18FXV5PLHJ9T8k")
             .collection("User").whereArrayContainsAny("bookmark", listOf(logPhoneNum)).limit(20)
             .get().addOnSuccessListener { result ->
                 for (document in result) {

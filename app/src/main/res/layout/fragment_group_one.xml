@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="162"
+        android:background="@color/backGray" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_weight="23"
+        android:textColor="@color/black"
+        android:text="모일수록" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_weight="162"
+        android:textColor="@color/black"
+        android:text="언제까지 UNLINK? 이제는 함께 LINK 하자!
+\n\n
+\nLINK 문화를 한 문구로 표현하면 '혼자 가면 빨리 가고 함께 가면 멀리 간다' 입니다.
+\n자신의 분야만 바라보며 달리는 것이 아니라 구성원 모두가
+\n모든 분야에 관심을 가지며 사업이 어떻게 흘러가고 있는지 지켜보고
+\n서로에게 도움이 되어 함께 나아가기 위해 노력하는 회사입니다." />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_weight="162"
+        android:textColor="@color/black"
+        android:text="LINK만의 독창적인 회사 문화 Ratel 정신\n
+\n
+\n여기서 Ratel은 벌꿀 오소리를 말합니다.
+\n벌꿀 오소리는 자기보다 몸집이 몇배는 더 큰 포식자들을 상대로물러서지 않고 싸우는 용기를 발휘 합니다.
+\nRatel 정신은 기존의 사회에 있지 않았던 새로운 것들에 도전하는 LINK의 정신입니다." />
+
+</LinearLayout>

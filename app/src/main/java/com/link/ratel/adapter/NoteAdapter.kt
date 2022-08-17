@@ -107,7 +107,7 @@ class NoteAdapter(
         holder.check.setOnClickListener {
 
             db.collection("teams")
-                .document("FxRFio9hTwGqAsU5AIZd")
+                .document("50Sr1i18FXV5PLHJ9T8k")
                 .collection("User").document(user.uid.toString())
                 .update("bookmark", FieldValue.arrayUnion(iduser))
             holder.check2.visibility = View.VISIBLE
@@ -117,7 +117,7 @@ class NoteAdapter(
         holder.check2.setOnClickListener {
 
             db.collection("teams")
-                .document("FxRFio9hTwGqAsU5AIZd")
+                .document("50Sr1i18FXV5PLHJ9T8k")
                 .collection("User").document(user.uid.toString())
                 .update("bookmark", FieldValue.arrayRemove(iduser))
             holder.check2.visibility = View.GONE
@@ -147,7 +147,7 @@ class NoteAdapter(
 
     fun search(searchWord: String, option: String) {
         firestore?.collection("teams")
-            ?.document("FxRFio9hTwGqAsU5AIZd")
+            ?.document("50Sr1i18FXV5PLHJ9T8k")
             ?.collection("User")
             ?.addSnapshotListener { querySnapshot, _ ->
                 // ArrayList 비워줌

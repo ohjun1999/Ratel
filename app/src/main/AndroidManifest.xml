@@ -20,17 +20,50 @@
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
+
+        </activity>
+
+
+
+        <activity android:name=".activity.NoticeDetailActivity" />
+        <!--        <activity android:name=".activity.DateActivity1" />-->
+
+        <activity
+            android:name=".activity.FirstActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.AuthConfirmInfoActivity"/>
-        <activity android:name=".activity.AuthenticationInfoActivity"/>
-        <activity android:name=".activity.AuthorityActivity"/>
-        <activity android:name=".activity.AuthorityAgreeActivity"/>
-        <activity android:name=".activity.FirstActivity"/>
+        <activity
+            android:name=".activity.SimplePasswordActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".activity.TermsFirstActivity"/>
+        <activity android:name=".activity.TermsSecondActivity"/>
+        <activity android:name=".activity.TermsThirdActivity"/>
+        <activity android:name=".activity.TermsFourthActivity"/>
+        <activity android:name=".activity.TermsFifthActivity"/>
+        <activity android:name=".activity.TermsSixthActivity"/>
         <activity android:name=".activity.SimplePassword2Activity"/>
+        <activity android:name=".activity.AuthConfirmInfoActivity" />
+        <activity android:name=".activity.AuthorityActivity" />
+        <activity android:name=".activity.AuthorityAgreeActivity" />
+        <activity android:name=".activity.AuthenticationInfoActivity" />
+        <activity android:name=".activity.NoteProfileDetailActivity" />
+        <activity android:name=".activity.ExtraActivity" />
+        <activity android:name=".activity.NoteActivity" />
+        <activity android:name=".activity.NoteProfileChangeActivity" />
+        <activity android:name=".activity.NoticeActivity" />
+        <activity android:name=".activity.ManageAuthenticationMethodsActivity" />
+        <activity android:name=".activity.InquiryActivity" />
+        <activity android:name=".activity.TermsActivity" />
+        <activity android:name=".activity.InquiryTextActivity" />
+        <activity android:name=".activity.InquiryContextActivity" />
+        <activity android:name=".activity.AlarmSettingActivity" />
+        <activity android:name=".activity.ExplainGroupActivity"/>
     </application>
 
 </manifest>

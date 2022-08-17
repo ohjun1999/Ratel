@@ -48,15 +48,15 @@ class NoteProfileChangeActivity : AppCompatActivity() {
         var notice = intent.getStringExtra("notice")
         var profile = intent.getStringExtra("profile")
         var question = intent.getStringExtra("question")
-        val reqProfile = intent.getStringExtra("reqProfile")!!.toInt()
+//        val reqProfile = intent.getStringExtra("reqProfile")!!.toInt()
         var reqQuestion = intent.getStringExtra("reqQuestion")
         var reqUser = intent.getStringExtra("reqUser")
         var schedule = intent.getStringExtra("schedule")
         var user = intent.getStringExtra("user")
         val reNum = 1
-        val sum = reqProfile + reNum
+//        val sum = reqProfile + reNum
 
-        Log.d("test", sum.toString())
+//        Log.d("test", sum.toString())
 
 
 
@@ -82,7 +82,7 @@ class NoteProfileChangeActivity : AppCompatActivity() {
             profileDataClass.pubDate = formatted.toString()
             profileDataClass.user = id.toString()
             profileDataClass.year = year.toString()
-            firestore?.collection("teams")?.document("FxRFio9hTwGqAsU5AIZd")?.collection("Profile")
+            firestore?.collection("teams")?.document("50Sr1i18FXV5PLHJ9T8k")?.collection("Profile")
                 ?.document()?.set(profileDataClass)
 
             val counterDataClass = CounterDataClass()
@@ -90,13 +90,13 @@ class NoteProfileChangeActivity : AppCompatActivity() {
             counterDataClass.notice = notice.toString()
             counterDataClass.profile = profile.toString()
             counterDataClass.question = question.toString()
-            counterDataClass.reqProfile = sum.toString()
+//            counterDataClass.reqProfile = sum.toString()
             counterDataClass.reqQuestion = reqQuestion.toString()
             counterDataClass.reqUser = reqUser.toString()
             counterDataClass.schedule = schedule.toString()
             counterDataClass.user = user.toString()
 
-            db.collection("teams").document("FxRFio9hTwGqAsU5AIZd")
+            db.collection("teams").document("50Sr1i18FXV5PLHJ9T8k")
                 .collection("Counter").document("counter").set(counterDataClass)
 
 

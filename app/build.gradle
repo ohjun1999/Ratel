@@ -58,3 +58,4 @@ dependencies {
     implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0'
     implementation 'com.google.firebase:firebase-database-ktx:20.0.5'
 }
+apply plugin: 'com.google.gms.google-services'

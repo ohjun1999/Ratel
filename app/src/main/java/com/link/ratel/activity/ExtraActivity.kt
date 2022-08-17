@@ -95,7 +95,7 @@ class ExtraActivity : AppCompatActivity() {
 
 
 
-        val getReq = db.collection("teams").document("FxRFio9hTwGqAsU5AIZd")
+        val getReq = db.collection("teams").document("50Sr1i18FXV5PLHJ9T8k")
             .collection("Counter")
         getReq
             .get()
@@ -159,7 +159,7 @@ class ExtraActivity : AppCompatActivity() {
 
 
 
-        val getReq = db.collection("teams").document("FxRFio9hTwGqAsU5AIZd")
+        val getReq = db.collection("teams").document("50Sr1i18FXV5PLHJ9T8k")
             .collection("Counter")
         getReq
             .get()

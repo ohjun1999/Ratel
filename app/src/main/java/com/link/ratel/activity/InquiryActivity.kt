@@ -56,7 +56,7 @@ class InquiryActivity : AppCompatActivity() {
         inquiryRecyclerView = binding.inquiryRecyclerView
         var InquiryList = arrayListOf<InquiryDataClass>()
         db.collection("teams")
-            .document("FxRFio9hTwGqAsU5AIZd")
+            .document("50Sr1i18FXV5PLHJ9T8k")
             .collection("Question").whereEqualTo("title", theContent).limit(1)
             .get().addOnSuccessListener { result ->
                 for (document in result) {
@@ -113,7 +113,7 @@ class InquiryActivity : AppCompatActivity() {
     inner class InquiryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         var deInquiry: ArrayList<InquiryBox> = arrayListOf()
         val first =
-            firestore?.collection("teams")?.document("FxRFio9hTwGqAsU5AIZd")
+            firestore?.collection("teams")?.document("50Sr1i18FXV5PLHJ9T8k")
                 ?.collection("Question")
 
         // firebase data 불러오기
