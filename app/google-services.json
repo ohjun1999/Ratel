@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "167918553902",
+    "project_id": "ratel-firebase",
+    "storage_bucket": "ratel-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167918553902:android:76a7a76137e5e85acec8bf",
+        "android_client_info": {
+          "package_name": "com.link.ratel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167918553902-68v6gbhblfpcvdmv6ftd0v7or4f61597.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.link.ratel",
+            "certificate_hash": "444e72af6023276f0e0fd667ba61ba6d1eef305a"
+          }
+        },
+        {
+          "client_id": "167918553902-grkjircc6dao9tn2e1b05n0s2q41b7bp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpULi09GoctAIjq-LO_LaRGsU_T8Kj4xQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167918553902-grkjircc6dao9tn2e1b05n0s2q41b7bp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

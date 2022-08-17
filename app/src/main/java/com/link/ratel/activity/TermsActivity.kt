@@ -1,18 +1,20 @@
-package com.link.ratel
+package com.link.ratel.activity
 
 
-import android.os.Bundle
+
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import com.link.ratel.databinding.ActivityTermsFourthBinding
+import android.os.Bundle
+import com.link.ratel.databinding.ActivityTermsBinding
 
 
-class TermsFourthActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityTermsFourthBinding
+class TermsActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityTermsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // binding class 인스턴스 생성
-        binding = ActivityTermsFourthBinding.inflate(layoutInflater)
+        binding = ActivityTermsBinding.inflate(layoutInflater)
         // binding class의 root를 참조하여 view로
         val view = binding.root
         setContentView(view)

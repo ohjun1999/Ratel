@@ -1,11 +1,11 @@
-package com.link.ratel
+package com.link.ratel.activity
 
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.link.ratel.MySharedPreferences
 import com.link.ratel.databinding.ActivityFirstBinding
 
 class FirstActivity: AppCompatActivity() {

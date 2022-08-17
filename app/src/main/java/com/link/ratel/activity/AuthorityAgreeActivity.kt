@@ -1,4 +1,4 @@
-package com.link.ratel
+package com.link.ratel.activity
 
 
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.link.ratel.R
+import com.link.ratel.*
 import com.link.ratel.databinding.ActivityAuthorityAgreeBinding
 
 class AuthorityAgreeActivity : AppCompatActivity() {

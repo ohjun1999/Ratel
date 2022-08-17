@@ -1,4 +1,4 @@
-package com.link.ratel
+package com.link.ratel.activity
 
 
 import android.content.Intent
