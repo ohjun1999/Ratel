@@ -52,7 +52,7 @@
                 android:id="@+id/confirmAuthNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/moilGreen"
+                android:background="@color/mainBlack"
                 android:text="확인"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -68,7 +68,7 @@
         android:id="@+id/goInfo"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/moilGreen"
+        android:background="@color/mainBlack"
         android:padding="8dp"
         android:text="동의하기"
         android:textColor="@color/white"

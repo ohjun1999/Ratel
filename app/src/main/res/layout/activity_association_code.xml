@@ -179,7 +179,7 @@
                 android:id="@+id/requestAuthNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/moilGreen"
+                android:background="@color/mainBlack"
                 android:text="요청"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -211,7 +211,7 @@
                 android:id="@+id/confirmAuthNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/moilGreen"
+                android:background="@color/mainBlack"
                 android:text="확인"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -227,7 +227,7 @@
         android:id="@+id/goNext"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/moilGreen"
+        android:background="@color/mainBlack"
         android:padding="8dp"
         android:text="다음"
         android:textColor="@color/white"

@@ -3,10 +3,13 @@ package com.link.ratel.activity
 
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.view.WindowInsets
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -46,8 +49,15 @@ class MainActivity : AppCompatActivity() {
         Log.d("test", name.toString())
 //        FirebaseMessaging.getInstance().subscribeToTopic("1")
 
-
-
+// 현재 기기의 SDK버전이 안드로이드11 보다 크거나 같다면
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
 
         // 접근 가능
 //        binding.goAlarm.setOnClickListener {
@@ -81,11 +91,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NoticeActivity::class.java)
             startActivity(intent)
         }
-//        binding.goDate.setOnClickListener {
-//            val intent = Intent(this, DateActivity::class.java)
-//            startActivity(intent)
-//
-//        }
+        binding.goDate.setOnClickListener {
+            val intent = Intent(this, DateActivity::class.java)
+            startActivity(intent)
+
+        }
         binding.goExplain.setOnClickListener {
             val intent = Intent(this, ExplainGroupActivity::class.java)
             startActivity(intent)
@@ -100,11 +110,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.maYear.text = year
         binding.maName.text = name
-        binding.maCompany.text = company
+//        binding.maCompany.text = company
 //        binding.banner.adapter = ViewPagerAdapter(getIdolList()) // 어댑터 생성
         binding.banner.orientation = ViewPager2.ORIENTATION_HORIZONTAL // 방향을 가로로
-
-
     }
 
     // 뷰 페이저에 들어갈 아이템

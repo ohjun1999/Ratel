@@ -47,7 +47,7 @@
             android:id="@+id/searchBtn"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@color/moilGreen"
+            android:background="@color/mainBlack"
             android:text="검색"
             android:textColor="@color/white" />
 
@@ -86,7 +86,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/white"
                 android:src="@drawable/ic_search_thing"
-                app:tint="@color/moilGreen" />
+                app:tint="@color/mainBlack" />
 
             <ImageButton
                 android:id="@+id/menuBtn2"
@@ -95,7 +95,7 @@
                 android:background="@color/white"
                 android:src="@drawable/ic_search_thing"
                 android:visibility="gone"
-                app:tint="@color/moilGreen" />
+                app:tint="@color/mainBlack" />
         </FrameLayout>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,7 +25,7 @@
             android:layout_marginBottom="10dp"
             android:background="@color/white"
             android:src="@drawable/ic_arrow_back"
-            app:tint="@color/moilGreen" />
+            app:tint="@color/mainBlack" />
 
         <TextView
             android:layout_width="0dp"
@@ -121,7 +121,7 @@
                 android:id="@+id/searchBtn"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@color/moilGreen"
+                android:background="@color/mainBlack"
                 android:text="검색"
                 android:textColor="@color/white" />
 
@@ -151,7 +151,7 @@
         <!--<androidx.appcompat.widget.AppCompatButton-->
         <!--    android:layout_width="wrap_content"-->
         <!--    android:layout_height="wrap_content"-->
-        <!--    android:background="@color/moilGreen"-->
+        <!--    android:background="@color/mainBlack"-->
         <!--    android:id="@+id/goBookmark"/>-->
     </FrameLayout>
 

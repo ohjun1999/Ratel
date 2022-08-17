@@ -84,7 +84,8 @@
                         android:layout_height="12dp"
                         android:layout_gravity="center_vertical"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_phone_number" />
+                        android:src="@drawable/ic_phone_number"
+                        app:tint="@color/mainBlack" />
 
                     <TextView
                         android:id="@+id/phoneNum"
@@ -112,7 +113,8 @@
                         android:layout_height="8dp"
                         android:layout_gravity="center_vertical"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_email_adress" />
+                        android:src="@drawable/ic_email_adress"
+                        app:tint="@color/mainBlack" />
 
                     <TextView
                         android:id="@+id/mailAdress"
@@ -144,7 +146,8 @@
                         android:layout_height="9.43dp"
                         android:layout_gravity="center_vertical"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/ic_position" />
+                        android:src="@drawable/ic_position"
+                        app:tint="@color/mainBlack" />
 
                     <TextView
                         android:id="@+id/companyName"
@@ -181,12 +184,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
+                    android:tint="@color/mainBlack"
                     android:src="@drawable/ic_favorite_border"/>
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/bookmark2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
+                    android:tint="@color/mainBlack"
                     android:src="@drawable/ic_favorite"
                     android:visibility="gone"/>
 

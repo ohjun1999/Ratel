@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:background="@color/white"
             android:src="@drawable/ic_arrow_back"
-            app:tint="@color/moilGreen" />
+            app:tint="@color/mainBlack" />
 
         <TextView
             android:layout_width="0dp"

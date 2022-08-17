@@ -49,9 +49,7 @@ class ExtraActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.changeProfile.setOnClickListener {
-
             getProfileReq()
-
         }
         binding.goTerms.setOnClickListener {
             val intent = Intent(this, TermsActivity::class.java)
@@ -65,9 +63,8 @@ class ExtraActivity : AppCompatActivity() {
             finish()
         }
 
-//        binding.exYear.text = year
+        binding.exYear.text = year
         binding.exName.text = name
-        binding.exCompany.text = company
     }
 
     private fun getProfileReq() {
@@ -137,7 +134,6 @@ class ExtraActivity : AppCompatActivity() {
                     intent.putExtra("reqUser", reqUser)
                     intent.putExtra("schedule", schedule)
                     intent.putExtra("user", user)
-
                     startActivity(intent)
                 }
             }

@@ -3,25 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/moilGreen">
+    android:fitsSystemWindows="true"
+    android:background="@color/mainBlack">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/image_37"
+        android:layout_width="117dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_ratel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
-        android:src="@drawable/ic_group_34"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@color/white" />
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/goSignUp"
@@ -32,7 +27,8 @@
         android:layout_marginBottom="40dp"
         android:background="@color/white"
         android:padding="8dp"
-        android:text="모일수록 가입하기"
+        android:text="Ratel 계정 생성"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/madeName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

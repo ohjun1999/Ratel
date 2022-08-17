@@ -24,7 +24,7 @@
             android:layout_weight="52"
             android:textColor="@color/black"
             android:gravity="center_vertical"
-            android:text="모일수록 계정 생성을 위해\n다음 권한 설정이 필요합니다."
+            android:text="Ratel 계정 생성을 위해\n다음 권한 설정이 필요합니다."
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -70,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:text="(필수)"
-                        android:textColor="@color/moilGreen"
+                        android:textColor="@color/mainBlack"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -127,7 +127,7 @@
         <!--                        android:layout_height="wrap_content"-->
         <!--                        android:layout_marginStart="10dp"-->
         <!--                        android:text="(선택)"-->
-        <!--                        android:textColor="@color/moilGreen"-->
+        <!--                        android:textColor="@color/mainBlack"-->
         <!--                        android:textSize="15sp"-->
         <!--                        android:textStyle="bold" />-->
 
@@ -183,7 +183,7 @@
         <!--                        android:layout_height="wrap_content"-->
         <!--                        android:layout_marginStart="10dp"-->
         <!--                        android:text="(선택)"-->
-        <!--                        android:textColor="@color/moilGreen"-->
+        <!--                        android:textColor="@color/mainBlack"-->
         <!--                        android:textSize="15sp"-->
         <!--                        android:textStyle="bold" />-->
 
@@ -239,7 +239,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:text="(선택)"
-                        android:textColor="@color/moilGreen"
+                        android:textColor="@color/mainBlack"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -285,7 +285,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/goAgree"
         android:layout_width="match_parent"
-        android:background="@color/moilGreen"
+        android:background="@color/mainBlack"
         android:text="확인"
         android:textColor="@color/white"
         android:textSize="20sp"

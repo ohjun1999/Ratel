@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
@@ -21,18 +22,20 @@
             android:layout_width="20dp"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:src="@drawable/ic_arrow_back"
-            app:tint="@color/moilGreen" />
+            android:src="@drawable/ic_back_sharp" />
+
+
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:fontFamily="@font/notosanskrregular"
+            android:layout_marginEnd="6dp"
             android:gravity="center"
             android:text="동문회 관련 문의"
+            android:fontFamily="@font/notosanskrmedium"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
+
 
         <ImageButton
             android:layout_width="20dp"
@@ -58,7 +61,7 @@
         android:textSize="15sp"
         android:gravity="center"
         android:padding="12dp"
-        android:background="@color/moilGreen"
+        android:background="@color/mainBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         android:textColor="@color/white"/>
 
