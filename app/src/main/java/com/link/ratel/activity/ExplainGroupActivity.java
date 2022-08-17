@@ -55,7 +55,10 @@ public class ExplainGroupActivity extends AppCompatActivity implements OnClickLi
                 finish();
             }
         });
-
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        GroupOneFragment groupOneFragment = new GroupOneFragment();
+        transaction.replace(R.id.frameLayout, groupOneFragment);
+        transaction.commit();
         btn1.setChecked(true);
 
         btn1.setOnClickListener(new View.OnClickListener() {

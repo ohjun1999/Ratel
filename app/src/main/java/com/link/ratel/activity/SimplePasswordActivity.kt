@@ -104,6 +104,13 @@ class SimplePasswordActivity : AppCompatActivity() {
                 finish()
             }
 
+            binding.etPasscode1.inputType = 0
+            binding.etPasscode2.inputType = 0
+            binding.etPasscode3.inputType = 0
+            binding.etPasscode4.inputType = 0
+            binding.etPasscode5.inputType = 0
+            binding.etPasscode6.inputType = 0
+            binding.etPasscode7.inputType = 0
 
         }
     }
@@ -148,7 +155,7 @@ class SimplePasswordActivity : AppCompatActivity() {
                     setEditText(binding.etPasscode5, binding.etPasscode6, strCurrentValue)
                 }
                 binding.etPasscode6.isFocused -> {
-                    binding.etPasscode6.setText(strCurrentValue)
+                    setEditText(binding.etPasscode6, binding.etPasscode7, strCurrentValue)
                 }
             }
 
@@ -167,6 +174,7 @@ class SimplePasswordActivity : AppCompatActivity() {
         binding.etPasscode4.setText("")
         binding.etPasscode5.setText("")
         binding.etPasscode6.setText("")
+        binding.etPasscode7.setText("")
         binding.etPasscode1.requestFocus()
     }
 
@@ -198,6 +206,10 @@ class SimplePasswordActivity : AppCompatActivity() {
             binding.etPasscode6.isFocused -> {
                 binding.etPasscode5.setText("")
                 binding.etPasscode5.requestFocus()
+            }
+            binding.etPasscode7.isFocused -> {
+                binding.etPasscode6.setText("")
+                binding.etPasscode6.requestFocus()
             }
         }
 

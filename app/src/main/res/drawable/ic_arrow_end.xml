@@ -10,7 +10,7 @@
             android:pathData="M12.8301,14.8696L18.1738,9.5259L12.8301,4.1821"
             android:strokeWidth="2"
             android:fillColor="#00000000"
-            android:strokeColor="#29AB87"
+            android:strokeColor="@color/mainBlack"
             android:strokeLineCap="square"/>
     </group>
 </vector>

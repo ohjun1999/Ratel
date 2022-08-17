@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_ratel_launcher_round"
         android:supportsRtl="true"
         android:name="com.link.ratel.App"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">

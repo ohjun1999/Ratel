@@ -22,18 +22,19 @@
             android:layout_width="20dp"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:src="@drawable/ic_arrow_back"
-            app:tint="@color/mainBlack" />
+            android:paddingStart="2dp"
+            android:src="@drawable/ic_back_sharp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/notosanskrmedium"
-            android:gravity="center"
-            android:text="개인정보 수집 및 이용 동의"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:gravity="start"
+            android:text="개인정보 수집 및 이용동의"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
         <ImageButton
             android:layout_width="20dp"

@@ -3,13 +3,10 @@ package com.link.ratel.activity
 
 import android.content.Intent
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-import android.view.WindowInsets
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -49,15 +46,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("test", name.toString())
 //        FirebaseMessaging.getInstance().subscribeToTopic("1")
 
-// 현재 기기의 SDK버전이 안드로이드11 보다 크거나 같다면
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.insetsController?.hide(WindowInsets.Type.statusBars())
-        } else {
-            window.setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN
-            )
-        }
+
 
         // 접근 가능
 //        binding.goAlarm.setOnClickListener {
@@ -100,10 +89,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ExplainGroupActivity::class.java)
             startActivity(intent)
         }
-        binding.goHome.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.moilsurok.shop/"))
-            startActivity(intent)
-        }
+//        binding.goHome.setOnClickListener {
+//            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.moilsurok.shop/"))
+//            startActivity(intent)
+//        }
 
 
 

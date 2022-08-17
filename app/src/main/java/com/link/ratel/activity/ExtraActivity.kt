@@ -50,12 +50,46 @@ class ExtraActivity : AppCompatActivity() {
         }
         binding.changeProfile.setOnClickListener {
             getProfileReq()
+            val intent = Intent(this, NoteProfileChangeActivity::class.java)
+            intent.putExtra("company", company)
+            intent.putExtra("name", name)
+            intent.putExtra("year", year)
+            intent.putExtra("birthdate", birthdate)
+            intent.putExtra("phoneNum", phoneNum)
+            intent.putExtra("email", email)
+            intent.putExtra("department", department)
+            intent.putExtra("comPosition", comPosition)
+            intent.putExtra("comTel", comTel)
+            intent.putExtra("comAdr", comAdr)
+            intent.putExtra("faxNum", faxNum)
+            intent.putExtra("id", id)
+//            intent.putExtra("answer", answer)
+//            intent.putExtra("notice", notice)
+//            intent.putExtra("profile", profile)
+//            intent.putExtra("question", question)
+//            intent.putExtra("reqProfile", reqProfile)
+//            intent.putExtra("reqQuestion", reqQuestion)
+//            intent.putExtra("reqUser", reqUser)
+//            intent.putExtra("schedule", schedule)
+//            intent.putExtra("user", user)
+            startActivity(intent)
         }
         binding.goTerms.setOnClickListener {
             val intent = Intent(this, TermsActivity::class.java)
             startActivity(intent)
         }
         binding.goInquiry.setOnClickListener {
+            val intent = Intent(this, InquiryActivity::class.java)
+//            intent.putExtra("answer", answer)
+//            intent.putExtra("notice", notice)
+//            intent.putExtra("profile", profile)
+//            intent.putExtra("question", question)
+//            intent.putExtra("reqProfile", reqProfile)
+//            intent.putExtra("reqQuestion", reqQuestion)
+//            intent.putExtra("reqUser", reqUser)
+//            intent.putExtra("schedule", schedule)
+//            intent.putExtra("user", user)
+            startActivity(intent)
             getQuestionReq()
         }
 
@@ -112,29 +146,7 @@ class ExtraActivity : AppCompatActivity() {
                     schedule = document.data["schedule"].toString()
                     user = document.data["user"].toString()
 
-                    val intent = Intent(this, NoteProfileChangeActivity::class.java)
-                    intent.putExtra("company", company)
-                    intent.putExtra("name", name)
-                    intent.putExtra("year", year)
-                    intent.putExtra("birthdate", birthdate)
-                    intent.putExtra("phoneNum", phoneNum)
-                    intent.putExtra("email", email)
-                    intent.putExtra("department", department)
-                    intent.putExtra("comPosition", comPosition)
-                    intent.putExtra("comTel", comTel)
-                    intent.putExtra("comAdr", comAdr)
-                    intent.putExtra("faxNum", faxNum)
-                    intent.putExtra("id", id)
-                    intent.putExtra("answer", answer)
-                    intent.putExtra("notice", notice)
-                    intent.putExtra("profile", profile)
-                    intent.putExtra("question", question)
-                    intent.putExtra("reqProfile", reqProfile)
-                    intent.putExtra("reqQuestion", reqQuestion)
-                    intent.putExtra("reqUser", reqUser)
-                    intent.putExtra("schedule", schedule)
-                    intent.putExtra("user", user)
-                    startActivity(intent)
+
                 }
             }
             //경로가 실패했을 때
@@ -175,17 +187,7 @@ class ExtraActivity : AppCompatActivity() {
                     schedule = document.data["schedule"].toString()
                     user = document.data["user"].toString()
 
-                    val intent = Intent(this, InquiryActivity::class.java)
-                    intent.putExtra("answer", answer)
-                    intent.putExtra("notice", notice)
-                    intent.putExtra("profile", profile)
-                    intent.putExtra("question", question)
-                    intent.putExtra("reqProfile", reqProfile)
-                    intent.putExtra("reqQuestion", reqQuestion)
-                    intent.putExtra("reqUser", reqUser)
-                    intent.putExtra("schedule", schedule)
-                    intent.putExtra("user", user)
-                    startActivity(intent)
+
                 }
             }
             //경로가 실패했을 때

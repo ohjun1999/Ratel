@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
         android:background="@color/white"
-        android:elevation="40dp"
         android:orientation="horizontal"
 
         android:paddingEnd="8dp"
@@ -21,36 +20,26 @@
 
         <ImageButton
             android:id="@+id/backKey"
-            android:layout_width="28dp"
+            android:layout_width="20dp"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:paddingStart="8dp"
-            android:src="@drawable/ic_arrow_back"
-            app:tint="@color/mainBlack" />
+            android:src="@drawable/ic_back_sharp" />
 
-        <View
+        <TextView
             android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:fontFamily="@font/notosanskrmedium"
+            android:gravity="center_vertical"
+            android:text="더보기"
+            android:textColor="@color/mainBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="6dp"
-                android:gravity="center"
-                android:text="동문수첩"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
 
 
-        </LinearLayout>
 
         <View
             android:layout_width="0dp"
@@ -80,7 +69,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:background="@color/white"
-                android:elevation="10dp"
                 app:layout_constraintTop_toBottomOf="@id/top_bar">
 
                 <ImageView
@@ -125,13 +113,6 @@
                 </LinearLayout>
 
 
-                <ImageButton
-                    android:layout_width="20dp"
-                    android:layout_height="28dp"
-                    android:layout_marginEnd="14dp"
-                    android:src="@drawable/ic_bookmark"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
