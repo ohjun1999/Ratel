@@ -160,14 +160,14 @@ class NoteFragment : Fragment() {
                 noteRecyclerView.layoutManager =
                     LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
 
-//                var lastVisible = result.documents[result.size() - 1]
+                var lastVisible = result.documents[result.size() - 1]
                 var next =
                     db
                         .collection("teams")
                         .document("50Sr1i18FXV5PLHJ9T8k")
                         .collection("User")
                         .orderBy("year", Query.Direction.ASCENDING)
-//                        .startAfter(lastVisible)
+                        .startAfter(lastVisible)
                         .limit(20)
                 binding.noteRecyclerView.addOnScrollListener(object :
                     RecyclerView.OnScrollListener() {
@@ -192,16 +192,22 @@ class NoteFragment : Fragment() {
                                             document.toObject(UserDataClass::class.java)
                                         UserList.add(item!!)
 
-//                                        lastVisible =
-//                                            result.documents[result.size() - 1]
+                                        lastVisible =
+                                            result.documents[result.size() - 1]
                                         next = db
                                             .collection("teams")
                                             .document("50Sr1i18FXV5PLHJ9T8k")
                                             .collection("User")
                                             .orderBy("year", Query.Direction.ASCENDING)
-//                                            .startAfter(lastVisible)
+                                            .startAfter(lastVisible)
                                             .limit(20)
-
+                                        noteRecyclerView.adapter = noteAdapter
+                                        noteRecyclerView.layoutManager =
+                                            LinearLayoutManager(
+                                                requireContext(),
+                                                RecyclerView.VERTICAL,
+                                                false
+                                            )
 
                                     }
 

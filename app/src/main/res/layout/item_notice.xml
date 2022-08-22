@@ -13,7 +13,7 @@
         android:id="@+id/textNotice"
         android:layout_width="47dp"
         android:layout_height="20dp"
-        android:src="@drawable/ic_notice_img"
+        android:src="@drawable/ic_group_8711_b"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />

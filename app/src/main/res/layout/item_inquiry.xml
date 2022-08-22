@@ -21,14 +21,14 @@
                 android:id="@+id/inquiry_ing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_ing1"
+                android:src="@drawable/ic_group_8826_b"
                 android:visibility="gone"/>
 
             <ImageView
                 android:id="@+id/inquiry_end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_end1" />
+                android:src="@drawable/ic_group_8728_b" />
 
         </FrameLayout>
 
