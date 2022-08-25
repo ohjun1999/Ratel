@@ -42,29 +42,34 @@ class AuthenticationInfoActivity : AppCompatActivity() {
 
         binding.requestAuthNum.setOnClickListener {
             hideKeyboard()
-            if ( binding.inputPhoneNum.text.trim()
-                    .isEmpty()
+            if (binding.inputPhoneNum.text.trim().isEmpty()
+
             ) {
                 Toast.makeText(this, "전화번호를 입력해주셔야 합니다.", Toast.LENGTH_SHORT).show()
+            } else if (binding.inputPhoneNum.length() < 13
+            ) {
+                Toast.makeText(this, "전화번호를 모두 입력해주셔야 합니다.", Toast.LENGTH_SHORT).show()
             } else {
                 binding.linearAuthNum.visibility = View.VISIBLE
-                val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                    override fun onVerificationCompleted(credential: PhoneAuthCredential) {}
-                    override fun onVerificationFailed(e: FirebaseException) {
-                    }
+                val callbacks =
+                    object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                        override fun onVerificationCompleted(credential: PhoneAuthCredential) {}
+                        override fun onVerificationFailed(e: FirebaseException) {
+                        }
 
-                    override fun onCodeSent(
-                        verificationId: String,
-                        token: PhoneAuthProvider.ForceResendingToken
-                    ) {
-                        this@AuthenticationInfoActivity.verificationId = verificationId
+                        override fun onCodeSent(
+                            verificationId: String,
+                            token: PhoneAuthProvider.ForceResendingToken
+                        ) {
+                            this@AuthenticationInfoActivity.verificationId = verificationId
+                        }
                     }
-                }
 
                 val options = PhoneAuthOptions.newBuilder(auth)
                     .setPhoneNumber(
                         phoneNumber82(
-                            binding.inputPhoneNum.text.toString().replace("[^0-9]".toRegex(), "")
+                            binding.inputPhoneNum.text.toString()
+                                .replace("[^0-9]".toRegex(), "")
 
                         )
                     )
@@ -81,13 +86,22 @@ class AuthenticationInfoActivity : AppCompatActivity() {
         }
 
         binding.confirmAuthNum.setOnClickListener {
-            val credential = PhoneAuthProvider.getCredential(
-                verificationId,
-                binding.inputAuthNum.text.toString()
-            )
-            signInWithPhoneAuthCredential(credential)
+            if (binding.inputAuthNum.text.trim().isEmpty()
+
+            ) {
+                Toast.makeText(this, "인증번호를 입력해주셔야 합니다.", Toast.LENGTH_SHORT).show()
+            }else if (binding.inputAuthNum.length() < 6) {
+                Toast.makeText(this, "인증번호를 입력해주셔야 합니다.", Toast.LENGTH_SHORT).show()
+            } else {
+                val credential = PhoneAuthProvider.getCredential(
+                    verificationId,
+                    binding.inputAuthNum.text.toString()
+                )
+                signInWithPhoneAuthCredential(credential)
+            }
             hideKeyboard()
         }
+
 
         binding.goNext.setOnClickListener {
 
@@ -146,6 +160,7 @@ class AuthenticationInfoActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     //인증성공
 
+                    binding.goNext.isEnabled = true
                     Toast.makeText(this, "인증에 성공했습니다.", Toast.LENGTH_SHORT).show()
                 } else {
                     //인증실패
@@ -169,7 +184,7 @@ class AuthenticationInfoActivity : AppCompatActivity() {
         var id: String
         var bookMark: String
         val logPhoneNum = binding.inputPhoneNum.text.toString()
-        val login = db.collection("teams").document("50Sr1i18FXV5PLHJ9T8k")
+        val login = db.collection("teams").document("FxRFio9hTwGqAsU5AIZd")
             .collection("User").whereEqualTo("phoneNum", logPhoneNum).whereEqualTo("check", "O")
         login
             .get()
