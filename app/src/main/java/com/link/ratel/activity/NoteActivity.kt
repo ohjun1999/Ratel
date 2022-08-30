@@ -96,6 +96,24 @@ class NoteActivity : AppCompatActivity() {
 //            hideKeyboard()
 //
 //        }
+        binding.menuBtn.setOnClickListener {
+
+            if (binding.btn1.isChecked) {
+                binding.menuBtn2.visibility = View.VISIBLE
+
+                val noteFragmentSearch: NoteFragment =
+                    supportFragmentManager.findFragmentById(R.id.noteFrame) as NoteFragment
+                noteFragmentSearch.btn01()
+            }
+        }
+
+        binding.menuBtn2.setOnClickListener {
+            binding.menuBtn2.visibility = View.GONE
+            val noteFragmentSearch: NoteFragment =
+                supportFragmentManager.findFragmentById(R.id.noteFrame) as NoteFragment
+            noteFragmentSearch.btn02()
+
+        }
 
         binding.backKey.setOnClickListener {
             finish()
@@ -135,6 +153,10 @@ class NoteActivity : AppCompatActivity() {
                 .replace(R.id.noteFrame, BookmarkFragment())
                 .commit()
         }
+    }
+
+    fun goneSearch() {
+        binding.menuBtn2.visibility = View.GONE
     }
 
     inner class NoteAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

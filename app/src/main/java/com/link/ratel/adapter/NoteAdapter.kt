@@ -74,7 +74,6 @@ class NoteAdapter(
         holder.year.text = user.year
         holder.comPosition.text = user.comPosition
 
-        Log.d("test12345", user.filenames.toString())
 
         if (user.bookmark!!.contains(iduser)) {
             holder.check2.visibility = View.VISIBLE
@@ -111,6 +110,7 @@ class NoteAdapter(
                 .collection("User").document(user.uid.toString())
                 .update("bookmark", FieldValue.arrayUnion(iduser))
             holder.check2.visibility = View.VISIBLE
+            Log.d("test12", user.uid.toString())
 
 
         }
@@ -121,7 +121,7 @@ class NoteAdapter(
                 .collection("User").document(user.uid.toString())
                 .update("bookmark", FieldValue.arrayRemove(iduser))
             holder.check2.visibility = View.GONE
-
+            Log.d("test123", iduser)
 
         }
     }

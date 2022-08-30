@@ -63,6 +63,7 @@ class NoteFragment : Fragment() {
 
         val logPhoneNum = MySharedPreferences.getUserId(requireContext())
 
+        Log.d("test1234", logPhoneNum)
 
 
         noteRecyclerView = binding.noteRecyclerView
@@ -104,7 +105,7 @@ class NoteFragment : Fragment() {
                 .get().addOnSuccessListener { result ->
                     UserList.clear()
                     for (document in result!!.documents) {
-                        if (document.getString(option)!!.contains(searchWord)) {
+                        if (document.getString(option)?.contains(searchWord) == true) {
                             var item = document.toObject(UserDataClass::class.java)
                             UserList.add(item!!)
                         }
@@ -118,23 +119,17 @@ class NoteFragment : Fragment() {
 
                     }
                     binding.search.visibility = View.GONE
-                    binding.menuBtn2.visibility = View.GONE
+                    (activity as NoteActivity).goneSearch()
                     context?.hideKeyboard(noteRecyclerView)
 
                 }
         }
 
 
-        binding.menuBtn.setOnClickListener {
-            binding.search.visibility = View.VISIBLE
-            binding.menuBtn2.visibility = View.VISIBLE
-        }
 
-        binding.menuBtn2.setOnClickListener {
-            binding.search.visibility = View.GONE
-            binding.menuBtn2.visibility = View.GONE
 
-        }
+
+
 
 
         db.collection("teams")
@@ -146,7 +141,6 @@ class NoteFragment : Fragment() {
                     var item = document.toObject(UserDataClass::class.java)
                     MySharedPreferences.setUserUid(requireContext(), document.id)
                     val uid123 = MySharedPreferences.getUserUid(requireContext())
-                    Log.d("test1234", "${document.id}=>${document.data}")
 
                     UserList.add(item)
 
@@ -169,6 +163,7 @@ class NoteFragment : Fragment() {
                         .orderBy("year", Query.Direction.ASCENDING)
                         .startAfter(lastVisible)
                         .limit(20)
+
                 binding.noteRecyclerView.addOnScrollListener(object :
                     RecyclerView.OnScrollListener() {
                     override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -201,26 +196,20 @@ class NoteFragment : Fragment() {
                                             .orderBy("year", Query.Direction.ASCENDING)
                                             .startAfter(lastVisible)
                                             .limit(20)
-                                        noteRecyclerView.adapter = noteAdapter
-                                        noteRecyclerView.layoutManager =
-                                            LinearLayoutManager(
-                                                requireContext(),
-                                                RecyclerView.VERTICAL,
-                                                false
-                                            )
+
 
                                     }
 
                                 }
 
                         } else if (lastVisibleItemPosition == itemTotalCount && result.size() < 0) {
-//                            lastVisible =
-//                                result.documents[result.size() - 1]
-//                            Toast.makeText(
-//                                context,
-//                                "더이상 불러올 데이터가 없습니다.",
-//                                Toast.LENGTH_SHORT
-//                            ).show()
+                            lastVisible =
+                                result.documents[result.size() - 1]
+                            Toast.makeText(
+                                context,
+                                "더이상 불러올 데이터가 없습니다.",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
                 })
@@ -269,6 +258,13 @@ class NoteFragment : Fragment() {
             }
     }
 
+    fun btn01(){
+        binding.search.visibility = View.VISIBLE
+    }
+
+    fun btn02(){
+        binding.search.visibility = View.GONE
+    }
 
 
     fun Context.hideKeyboard(view: View) {

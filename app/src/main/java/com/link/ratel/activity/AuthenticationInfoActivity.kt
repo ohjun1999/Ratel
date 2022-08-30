@@ -108,7 +108,7 @@ class AuthenticationInfoActivity : AppCompatActivity() {
             goPhoneNum()
 
         }
-        binding.inputPhoneNum.addTextChangedListener(PhoneNumberFormattingTextWatcher())
+        binding.inputPhoneNum.addTextChangedListener(PhoneNumberFormattingTextWatcher("KR"))
 //        val itemList = listOf("통신사를 선택해주세요", "LG U+", "SKT", "KT")
 //        val adapter = ArrayAdapter(this, R.layout.simple_list_item_1, itemList)
 //        binding.inputNews.adapter = adapter
@@ -184,7 +184,7 @@ class AuthenticationInfoActivity : AppCompatActivity() {
         var id: String
         var bookMark: String
         val logPhoneNum = binding.inputPhoneNum.text.toString()
-        val login = db.collection("teams").document("FxRFio9hTwGqAsU5AIZd")
+        val login = db.collection("teams").document("50Sr1i18FXV5PLHJ9T8k")
             .collection("User").whereEqualTo("phoneNum", logPhoneNum).whereEqualTo("check", "O")
         login
             .get()

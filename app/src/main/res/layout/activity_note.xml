@@ -38,7 +38,25 @@
         <FrameLayout
             android:layout_width="20dp"
             android:layout_height="match_parent">
-
+            <ImageButton
+                android:id="@+id/menuBtn"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_search_thing"
+                app:tint="@color/black" />
+            <ImageButton
+                android:id="@+id/menuBtn2"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_search_thing"
+                android:visibility="gone"
+                app:tint="@color/black"  />
 
         </FrameLayout>
     </LinearLayout>
